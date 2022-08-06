@@ -1,0 +1,20 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "editor.formatOnSave": true,
+  "eslint.enable": false,
+  "search.exclude": {
+    "**/package-lock.json": true,
+    "**/yarn.lock": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "json.schemas": [
+    {
+      "fileMatch": ["deno.json", "deno.jsonc"],
+      "url": "https://cdn.deno.land/deno/versions/v1.24.2/raw/cli/schemas/config-file.v1.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "fmt": {
+    "options": {
+      // See https://deno.land/manual/tools/formatter
+      // These are the defaults.
+      "indentWidth": 2,
+      "lineWidth": 80,
+      "proseWrap": "always",
+      "singleQuote": false,
+      "useTabs": false
+    }
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["no-explicit-any", "no-namespace"]
+    }
+  }
+}
