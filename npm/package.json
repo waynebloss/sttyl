@@ -1,0 +1,34 @@
+{
+  "module": "./esm/mod.js",
+  "main": "./script/mod.js",
+  "types": "./types/mod.d.ts",
+  "name": "sttyl",
+  "version": "1.0.0",
+  "description": "Style templates for console.log.",
+  "license": "MIT",
+  "author": {
+    "name": "Wayne Bloss",
+    "email": "waynebloss@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waynebloss/sttyl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/waynebloss/sttyl/issues"
+  },
+  "exports": {
+    ".": {
+      "import": "./esm/mod.js",
+      "require": "./script/mod.js",
+      "types": "./types/mod.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "node test_runner.js"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.37",
+    "chalk": "4.1.2"
+  }
+}
