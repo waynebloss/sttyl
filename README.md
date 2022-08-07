@@ -1,14 +1,14 @@
 # _s**tty**l_
 
 [![Tags](https://img.shields.io/github/release/waynebloss/sttyl)](https://github.com/waynebloss/sttyl/releases)
-[![Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/sttyl@1.0.0/mod.ts)
+[![Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/sttyl@1.0.1/mod.ts)
 
 Style templates for `console.log`.
 
 ## Usage
 
 ```ts
-import { sttyl } from "https://deno.land/x/sttyl@1.0.0/mod.ts";
+import { sttyl } from "https://deno.land/x/sttyl@1.0.1/mod.ts";
 //
 // Basic
 //
