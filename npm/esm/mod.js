@@ -30,10 +30,7 @@ const defaultStyles = {
 };
 function styledWith(styles) {
     if (styles !== defaultStyles) {
-        styles = {
-            ...defaultStyles,
-            ...styles,
-        };
+        styles = Object.assign(Object.assign({}, defaultStyles), styles);
     }
     function styledTag(strings, ...args) {
         /** Message parts to be joined for 1st string argument of `console.log`. */
@@ -48,7 +45,7 @@ function styledWith(styles) {
                 arg = parseStyleCodes(arg);
             }
             else {
-                arg = arg ?? "";
+                arg = arg !== null && arg !== void 0 ? arg : "";
             }
             msg.push(str);
             msg.push(arg);

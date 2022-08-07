@@ -3,7 +3,7 @@
   "main": "./script/mod.js",
   "types": "./types/mod.d.ts",
   "name": "sttyl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Style templates for console.log.",
   "license": "MIT",
   "author": {

@@ -6,6 +6,9 @@ import { build, emptyDir } from "https://deno.land/x/dnt/mod.ts";
 await emptyDir("./npm");
 
 await build({
+  compilerOptions: {
+    target: "ES2016",
+  },
   entryPoints: ["./mod.ts"],
   outDir: "./npm",
   shims: {

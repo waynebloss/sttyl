@@ -3,7 +3,7 @@
 [![Tags](https://img.shields.io/github/release/waynebloss/sttyl)](https://github.com/waynebloss/sttyl/releases)
 [![Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/sttyl@1.0.0/mod.ts)
 
-Style templates for console.log in Deno.
+Style templates for `console.log`.
 
 ## Usage
 
@@ -50,8 +50,13 @@ _The code above should output something like this:_
 
 ## Browser Usage
 
-The code in `mod.ts` should work perfectly well in a browser once compiled to
-JavaScript. Look for an NPM module soon.
+The usage above works in modern browsers.
+
+Install with `npm install sttyl` or `yarn add sttyl` and modify import to:
+
+```ts
+import sttyl from "sttyl";
+```
 
 ## Default Styles
 
