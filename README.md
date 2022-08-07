@@ -50,7 +50,7 @@ _The code above should output something like this:_
 
 ## Browser Usage
 
-The code in `mode.ts` should work perfectly well in a browser once compiled to
+The code in `mod.ts` should work perfectly well in a browser once compiled to
 JavaScript. Look for an NPM module soon.
 
 ## Default Styles
