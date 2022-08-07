@@ -30,7 +30,7 @@ const defaultStyles: Record<string, string> = {
   // #endregion
 };
 
-export interface Styled {
+export interface sttyl {
   (strings: TemplateStringsArray, ...args: unknown[]): string[];
   with: typeof styledWith;
 }
@@ -106,15 +106,15 @@ function styledWith(styles: Record<string, string>) {
   return styledTag;
 }
 
-export const styled = styledWith(defaultStyles) as Styled;
-styled.with = styledWith;
-export default styled;
+export const sttyl = styledWith(defaultStyles) as sttyl;
+sttyl.with = styledWith;
+export default sttyl;
 
 // #region Testing
 
 // console.log("");
 // console.log(
-//   "Testing %cstyled%c...",
+//   "Testing %csttyl%c...",
 //   `${defaultStyles.b};${defaultStyles.u};${defaultStyles.cyan}`,
 //   "",
 // );
@@ -123,7 +123,7 @@ export default styled;
 // // Basic
 // //
 // console.log(
-//   ...styled`Hello, here is some ${"RED"}.b.i.red.u//&${"YELLOW"}.yellow/ text.`,
+//   ...sttyl`Hello, here is some ${"RED"}.b.i.red.u//&${"YELLOW"}.yellow/ text.`,
 //   {
 //     and: "some args",
 //     more: "and some more args",
@@ -133,10 +133,10 @@ export default styled;
 // //
 // // Dynamic Styles
 // //
-// const code1 = ".b.i.cyan.u/";
-// const code2 = ".b.green/";
+// const style1 = ".b.i.cyan.u/";
+// const style2 = ".b.green/";
 // console.log(
-//   ...styled`...and some ${"dynamically"}${code1} ${"styled"}${code2} text.`,
+//   ...sttyl`...and some ${"dynamically"}${style1} ${"styled"}${style2} text.`,
 // );
 // console.log("");
 // //
@@ -146,14 +146,17 @@ export default styled;
 //   s1: `color: magenta; font-weight: bold`,
 //   s2: `color: orange; font-style: italic`,
 // };
+// const myStyle = sttyl.with(styles);
 // console.log(
-//   ...styled.with(styles)`...and ${"text"}.s1/ ${"with custom styles."}.s2/`,
+//   ...myStyle`...and ${"text"}.s1/ ${"with custom style names"}.s2.u/.`,
 // );
 // console.log("");
 // //
 // // Done
 // //
-// console.log("Testing completed.");
+// console.log(
+//   ...sttyl`Testing ${"sttyl"}.cyan.b.u/ completed.`,
+// );
 // console.log("");
 
 // #endregion
