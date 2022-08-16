@@ -1,7 +1,7 @@
 # _s**tty**l_
 
 [![Tags](https://img.shields.io/github/release/waynebloss/sttyl)](https://github.com/waynebloss/sttyl/releases)
-[![Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/sttyl@1.0.2/mod.ts)
+[![Doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/sttyl@1.0.3/mod.ts)
 
 Style templates for `console.log`.
 
@@ -10,7 +10,7 @@ Style templates for `console.log`.
 This module is primarily intended for [Deno](https://deno.land/) and browsers.
 
 ```ts
-import { sttyl } from "https://deno.land/x/sttyl@1.0.2/mod.ts";
+import { sttyl } from "https://deno.land/x/sttyl@1.0.3/mod.ts";
 //
 // Basic
 //
