@@ -1,9 +1,66 @@
 /**
- * @file Styling functions for `console.log`.
- * Usage: See testing area at bottom of file.
- * References:
- * - https://developer.mozilla.org/en-US/docs/Web/API/console#styling_console_output
+ * Tagged template literal for styling `console.log` statements.
+ * @see [Styling console output on MDN](https://developer.mozilla.org/en-US/docs/Web/API/console#styling_console_output)
+ * @example
+ * // Basic
+ * console.log(
+ *   ...sttyl`Print ${"bold"}.b/ and ${"italic red"}.i.red/.`,
+ * );
+ * // Dynamic Styles
+ * const style1 = ".b.cyan.u/";
+ * console.log(
+ *  ...sttyl`Some ${"dynamically styled text"}${style1}.`,
+ * );
+ * // Custom Styles
+ * const styles = {
+ *   s1: `color: magenta; font-weight: bold`,
+ *   s2: `color: orange; font-style: italic`,
+ * };
+ * const myStyle = sttyl.with(styles);
+ * console.log(
+ *   ...myStyle`${"And"}.s1/ ${"custom styles"}.s2.u/.`,
+ * );
+ * // Default Styles
+ * {
+ *   // Colors
+ *   black: "color: black",
+ *   blue: "color: blue",
+ *   cyan: "color: cyan",
+ *   gray: "color: gray",
+ *   green: "color: green",
+ *   grey: "color: grey",
+ *   magenta: "color: magenta",
+ *   red: "color: red",
+ *   white: "color: white",
+ *   yellow: "color: yellow",
+ *   // Formatting
+ *   b: "font-weight: bold",
+ *   bold: "font-weight: bold",
+ *   i: "font-style: italic",
+ *   italic: "font-style: italic",
+ *   s: "text-decoration: line-through",
+ *   strike: "text-decoration: line-through",
+ *   u: "text-decoration: underline",
+ *   underline: "text-decoration: underline",
+ * }
  */
+export interface sttyl {
+  (strings: TemplateStringsArray, ...args: unknown[]): string[];
+  /**
+   * Creates a sttyl function that mixes your custom styles in with the default
+   * styles. See main `sttyl` docs for a list of default styles.
+   * @example
+   * const styles = {
+   *   s1: `color: magenta; font-weight: bold`,
+   *   s2: `color: orange; font-style: italic`,
+   * };
+   * const myStyle = sttyl.with(styles);
+   * console.log(
+   *   ...myStyle`Log ${"some"}.s1/ ${"custom styles"}.s2.u/.`,
+   * );
+   */
+  with: typeof styledWith;
+}
 
 const defaultStyles: Record<string, string> = {
   // #region Colors
@@ -18,7 +75,7 @@ const defaultStyles: Record<string, string> = {
   white: "color: white",
   yellow: "color: yellow",
   // #endregion
-  // #region Text formats
+  // #region Formatting
   b: "font-weight: bold",
   bold: "font-weight: bold",
   i: "font-style: italic",
@@ -29,11 +86,6 @@ const defaultStyles: Record<string, string> = {
   underline: "text-decoration: underline",
   // #endregion
 };
-
-export interface sttyl {
-  (strings: TemplateStringsArray, ...args: unknown[]): string[];
-  with: typeof styledWith;
-}
 
 function styledWith(styles: Record<string, string>) {
   if (styles !== defaultStyles) {

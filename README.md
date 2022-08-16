@@ -79,7 +79,7 @@ const defaultStyles: Record<string, string> = {
   white: "color: white",
   yellow: "color: yellow",
   // #endregion
-  // #region Text formats
+  // #region Formatting
   b: "font-weight: bold",
   bold: "font-weight: bold",
   i: "font-style: italic",
