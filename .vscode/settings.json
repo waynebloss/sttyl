@@ -14,7 +14,7 @@
   "json.schemas": [
     {
       "fileMatch": ["deno.json", "deno.jsonc"],
-      "url": "https://cdn.deno.land/deno/versions/v1.24.2/raw/cli/schemas/config-file.v1.json"
+      "url": "https://cdn.deno.land/deno/versions/v1.24.3/raw/cli/schemas/config-file.v1.json"
     }
   ]
 }
