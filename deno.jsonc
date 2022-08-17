@@ -1,5 +1,13 @@
 {
   "fmt": {
+    "files": {
+      "exclude": [
+        ".git",
+        ".vscode",
+        "npm",
+        "_tools"
+      ]
+    },
     "options": {
       // See https://deno.land/manual/tools/formatter
       // These are the defaults.
@@ -11,11 +19,19 @@
     }
   },
   "lint": {
+    "files": {
+      "exclude": [
+        ".git",
+        ".vscode",
+        "npm",
+        "_tools"
+      ]
+    },
     "rules": {
       "exclude": ["no-explicit-any", "no-namespace"]
     }
   },
   "tasks": {
-    "build-npm": "deno run -A scripts/build_npm.ts"
+    "build-npm": "deno run -A _tools/build_npm.ts"
   }
 }
